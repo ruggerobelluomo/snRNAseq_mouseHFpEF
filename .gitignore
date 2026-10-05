@@ -1,0 +1,15 @@
+# Data, results and private inputs are never part of this repository
+data/objects/
+data/raw/
+results/
+config/*
+!config/README.md
+*.h5ad
+*.h5
+*.rds
+*.RData
+*.csv.gz
+*_cache/
+*_files/
+.Rhistory
+.ipynb_checkpoints/

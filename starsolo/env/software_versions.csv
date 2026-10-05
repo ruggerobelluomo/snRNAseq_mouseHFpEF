@@ -1,0 +1,14 @@
+step,software,version,note
+reference,10x Genomics refdata-gex-mm10-2020-A,2020-A,"GRCm38, Ensembl 98 / GENCODE vM23, 32,285 genes; same reference as the original Cell Ranger run"
+original processing,Cell Ranger,6.0.2,"produced the BAMs used as input; reference mm10-2020-A, Single Cell 3' v3, include introns = false (web_summary.html of every library); 52-64% of reads mapped confidently to introns were not counted"
+recount,STAR (STARsolo),2.7.11b,"GeneFull_Ex50pAS, Gene and Velocyto features"
+recount,samtools,1.21,"htslib 1.24; read filtering of the BAM"
+recount,7-Zip (p7zip),16.02,"extraction of single BAMs from the zip archives"
+recount,Python,3.12.14,
+recount,numpy / scipy / pandas / h5py / anndata,2.5.3 / 1.18.1 / 3.0.6 / 3.16.0 / 0.13.4,"conversion to 10x HDF5 and h5ad"
+ambient RNA,CellBender,0.4.0,"remove-background; release states outputs identical to 0.3.2/0.3.0; 0.3.2 cannot save its checkpoint with PyTorch >= 2 (GitHub issue #296), which the posterior step requires"
+ambient RNA,PyTorch,2.8.0+cu128,"CUDA 12.8, cuDNN 9.10.02"
+ambient RNA,pyro-ppl / dill,1.9.1 / 0.4.1,
+ambient RNA,Python,3.10.21,
+hardware,GPU,NVIDIA GeForce RTX 5070 Ti (16 GB),"driver 616.92"
+hardware,CPU / RAM,8 cores / 47 GB,"Linux (WSL2)"

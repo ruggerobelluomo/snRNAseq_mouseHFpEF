@@ -1,0 +1,15 @@
+name: starsolo
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12.14
+  - star=2.7.11b
+  - samtools=1.21
+  - p7zip=16.02
+  - pigz
+  - numpy=2.5.3
+  - scipy=1.18.1
+  - pandas=3.0.6
+  - h5py=3.16.0
+  - anndata=0.13.4
